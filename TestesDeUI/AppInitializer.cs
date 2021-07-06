@@ -21,6 +21,9 @@ namespace TestesDeUI
             //    #if ENABLE_TEST_CLOUD
             //    Xamarin.Calabash.Start();
             //    #endif
+
+            
+
             if (platform == Platform.Android)
             {
                 return ConfigureApp
@@ -31,12 +34,21 @@ namespace TestesDeUI
                     .StartApp();
             }
 
-            return ConfigureApp
-                .iOS
-                // TODO: Update this path to point to your iOS app and uncomment the
-                // code if the app is not included in the solution.
-                //.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")
-                .StartApp();
+            var iOSConfiguration = ConfigureApp.iOS;
+
+            string appBundlePath = Environment.GetEnvironmentVariable("APP_BUNDLE_PATH");
+            if (!string.IsNullOrEmpty(appBundlePath))
+            {
+                iOSConfiguration.AppBundle(appBundlePath);
+            }
+
+            string iosSimulatorUdid = Environment.GetEnvironmentVariable("IOS_SIMULATOR_UDID");
+            if (!string.IsNullOrEmpty(iosSimulatorUdid))
+            {
+                iOSConfiguration.DeviceIdentifier(iosSimulatorUdid);
+            }
+
+            return iOSConfiguration.StartApp();
         }
     }
 }

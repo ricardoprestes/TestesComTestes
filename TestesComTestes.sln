@@ -3,8 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesComTestes.Android", "TestesComTestes.Android\TestesComTestes.Android.csproj", "{CFB70884-9F84-4CA9-93EB-23F724492A9C}"
-EndProject
+#Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesComTestes.Android", "TestesComTestes.Android\TestesComTestes.Android.csproj", "{CFB70884-9F84-4CA9-93EB-23F724492A9C}"
+#EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesComTestes.iOS", "TestesComTestes.iOS\TestesComTestes.iOS.csproj", "{D7349594-F6AD-4D4B-8F19-8602C47349D4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesComTestes", "TestesComTestes\TestesComTestes.csproj", "{CC3D55DB-2C05-4255-A7FE-41B6B6498B72}"
