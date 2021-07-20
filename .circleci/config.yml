@@ -1,19 +1,22 @@
-version: 2.1
+orbs:
+  win: circleci/windows@2.4.0
 
 jobs:
-  build-and-test:  
-    docker:
-      - image: mcr.microsoft.com/dotnet/sdk:5.0
+
+  build:
+    executor:
+      name: win/default
+      size: "medium"
+
     steps:
       - checkout
-      - run:
-          working_directory: ~/project
-          name: Build Android
+      - run: 
+          name: build
           command: |
             msbuild App.Android/App.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
-            
 
 workflows:
-  sample: 
+  version: 2
+  build_and_upload_artifact:
     jobs:
-      - build-and-test
+      - build
