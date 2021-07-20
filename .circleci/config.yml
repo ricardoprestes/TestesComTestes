@@ -15,8 +15,7 @@ jobs:
       - run: 
           name: build
           command: |
-            dir
-            msbuild App.Android/App.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
+            msbuild TestesComTestes.Android/TestesComTestes.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
 
 workflows:
   version: 2
