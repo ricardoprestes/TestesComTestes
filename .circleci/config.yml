@@ -10,7 +10,7 @@ jobs:
           working_directory: ~/project
           name: Build Android
           command: |
-            dotnet build App.Android/App.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
+            msbuild App.Android/App.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
             
 
 workflows:
