@@ -16,7 +16,7 @@ jobs:
           name: build
           command: |
             nuget restore
-            msbuild TestesComTestes.Android/TestesComTestes.Android.csproj
+            msbuild TestesComTestes.sln
 
 workflows:
   version: 2
