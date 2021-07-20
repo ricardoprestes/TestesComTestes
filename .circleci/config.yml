@@ -15,7 +15,7 @@ jobs:
       - run: 
           name: build
           command: |
-            ls -la App.Android/
+            dir
             msbuild App.Android/App.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
 
 workflows:
