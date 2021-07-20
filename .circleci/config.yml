@@ -7,10 +7,10 @@ jobs:
     steps:
       - checkout
       - run:
-          working_directory: ~/project/App.Tests
-          name: Run tests
+          working_directory: ~/project/App.Android
+          name: Build Android
           command: |
-            dotnet test
+            msbuild App.Android/App.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
             
 
 workflows:
