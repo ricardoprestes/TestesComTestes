@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run:
-          working_directory: ~/project/App.Android
+          working_directory: ~/project
           name: Build Android
           command: |
             msbuild App.Android/App.Android.csproj "/p:Configuration=CI" "/t:PackageForAndroid"
