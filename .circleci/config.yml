@@ -2,8 +2,8 @@ version: 2.1
 
 jobs:
   build-and-test:  
-    macos:
-      xcode: 12.5.1
+    docker:
+      - image: microsoft/dotnet:latest
     steps:
       - checkout
       - run:
