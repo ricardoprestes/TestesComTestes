@@ -7,8 +7,8 @@ using Xamarin.UITest.Queries;
 
 namespace TestesDeUI
 {
-    //[TestFixture(Platform.Android)]
-    [TestFixture(Platform.iOS)]
+    [TestFixture(Platform.Android)]
+    //[TestFixture(Platform.iOS)]
     public class Tests
     {
         IApp app;
