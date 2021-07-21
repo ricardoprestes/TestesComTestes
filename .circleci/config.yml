@@ -13,14 +13,12 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: start emulator
-          command: |
-            emulator -list-avds
-      - run: 
           name: build
           command: |
             nuget restore
             msbuild TestesComTestes.sln
+            export APP_BUNDLE_PATH=`pwd`/TestesComTestes.Android/bin/Debug/TestesComTestes.Android.apk
+            mono ~/.nuget/packages/nunit.consolerunner/*/tools/nunit3-console.exe TestesDeUI/bin/*/TestesDeUI.dll
 
 workflows:
   version: 2
