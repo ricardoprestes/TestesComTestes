@@ -11,7 +11,7 @@ jobs:
           name: build
           command: |
             dotnet restore
-            dotnet msbuild TestesComTestes.Android/TestesComTestes.Android.csproj
+            dotnet msbuild TestesComTestes.sln
             set APP_BUNDLE_PATH=`pwd`/TestesComTestes.Android/bin/Debug/TestesComTestes.Android.apk
             mono ~/.nuget/packages/nunit.consolerunner/*/tools/nunit3-console.exe TestesDeUI/bin/*/TestesDeUI.dll
 
