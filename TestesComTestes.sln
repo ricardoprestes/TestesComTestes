@@ -8,6 +8,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesComTestes", "TestesCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesDeUI", "TestesDeUI\TestesDeUI.csproj", "{4B780FE0-7F53-4765-AB04-3A3092A9BE78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesComTestes.Android", "TestesComTestes.Android\TestesComTestes.Android.csproj", "{CFB70884-9F84-4CA9-93EB-23F724492A9C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesComTestes.iOS", "TestesComTestes.iOS\TestesComTestes.iOS.csproj", "{D7349594-F6AD-4D4B-8F19-8602C47349D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
