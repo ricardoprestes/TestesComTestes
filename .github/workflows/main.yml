@@ -29,4 +29,5 @@ jobs:
         msbuild TestesComTestes.iOS/TestesComTestes.iOS.csproj /verbosity:normal /t:Rebuild /p:Platform=iPhoneSimulator /p:Configuration=Debug
         export APP_BUNDLE_PATH=./TestesComTestes.iOS/bin/iPhoneSimulator/Debug/TestesComTestes.iOS.app
         export IOS_SIMULATOR_UDID=$(xcrun simctl list devices | grep "14.5" -A 100 | grep "iPhone 12 Pro (" | awk '{print $4}' | sed 's/(//;s/)//' | head -1)
+        msbuild TestesDeUI/TestesDeUI.csproj "/p:Configuration=Debug"
         mono ~/.nuget/packages/nunit.consolerunner/*/tools/nunit3-console.exe TestesDeUI/bin/Debug/TestesDeUI.dll
