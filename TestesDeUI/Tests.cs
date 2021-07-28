@@ -3,7 +3,7 @@ using Xamarin.UITest;
 
 namespace TestesDeUI
 {
-    [TestFixture(Platform.Android)]
+    //[TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
     public class Tests
     {
